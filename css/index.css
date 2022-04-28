@@ -1,0 +1,214 @@
+body{
+  margin: 0;
+  background: black;
+}
+
+.searchForm{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search{
+  width: 500px;
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 5px;
+  font-family: montserrat;
+  outline: 0;
+  border: 0;
+}
+
+.container{
+  width: 90%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.card-image{
+  display: flex;
+  justify-content: center;
+}
+
+.container .card .card-image img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.container .card {
+  width: 400px;
+  height: 550px;
+  background: white;
+  margin-bottom: 50px;
+  font-family: montserrat;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-body,
+.card-footer{
+  margin-left: 15px;
+}
+
+.card-body h2{
+  margin: 0;
+}
+
+.card-footer button{
+  width: 150px;
+  height: 35px;
+  background: olive;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: montserrat;
+}
+
+.about{
+  display: flex;
+  align-items: center;
+}
+
+.about p{
+  margin-left: 5px;
+}
+
+.notThisPrice{
+  text-decoration: line-through;
+}
+
+.moreCard{
+  width: 90%;
+  height: 600px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  margin-left: 50px;
+}
+
+.more-image img{
+  width: 500px;
+}
+
+.more-info{
+  font-family: montserrat;
+}
+
+
+.more-footer button{
+  background: olive;
+  width: 200px;
+  height: 40px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-family: montserrat;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+
+.modal-window{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 800px;
+  height: 500px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 15px;
+  color: white;
+  display: none;
+}
+
+.fa-times{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-window input{
+  width: 500px;
+  height: 40px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  font-family: montserrat;
+}
+
+.modal-window button{
+  width: 520px;
+  height: 40px;
+  background: olive;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: montserrat;
+}
+
+.modal-window.active{
+  display: flex;
+}
+
+.back{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: olive;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+}
+
+.modal_success{
+  width: 350px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  font-family: montserrat;
+  background: wheat;
+  border-radius: 5px;
+  position: fixed;
+  top: -100%;
+  left: 40%;
+  opacity: 0;
+  box-shadow: 0 0 10px black;
+  transition: .5s;
+}
+
+.modal_success button{
+  width: 150px;
+  height: 35px;
+  background: olive;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: montserrat;
+}
+
+.modal_success.active{
+  opacity: 1;
+  top: 50px;
+  transition: .5s;
+}
