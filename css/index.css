@@ -43,6 +43,7 @@ body{
   width: 400px;
   height: 550px;
   background: white;
+  border-radius: 10px;
   margin-bottom: 50px;
   font-family: montserrat;
   padding: 15px;
@@ -133,14 +134,6 @@ body{
   display: none;
 }
 
-.fa-times{
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
 .modal-window input{
   width: 500px;
   height: 40px;
@@ -211,4 +204,75 @@ body{
   opacity: 1;
   top: 50px;
   transition: .5s;
+}
+
+.add_good{
+  width: 350px;
+  height: 350px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  padding-top: 25px;
+  position: absolute;
+  top: -100%;
+  left: 25px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.add_good div input{
+  margin-bottom: 15px;
+  width: 250px;
+  height: 35px;
+  padding-left: 15px;
+  background: rgb(206, 206, 206);
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  font-family: montserrat;
+}
+
+.add_good button{
+  width: 150px;
+  height: 35px;
+  background: olive;
+  color: white;
+  font-family: montserrat;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add_good li{
+  list-style: none;
+}
+
+.fa-times{
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+}
+
+.add{
+  width: 150px;
+  height: 35px;
+  background: olive;
+  font-family: montserrat;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.add_good.active{
+  opacity: 1;
+  transition: .5s;
+  top: 80px;
 }

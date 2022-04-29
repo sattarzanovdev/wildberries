@@ -81,3 +81,10 @@ body{
   margin-left: 25px;
   text-decoration: underline olive;
 }
+
+.close{
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
