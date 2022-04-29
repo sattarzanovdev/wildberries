@@ -174,5 +174,6 @@ const $signOut = document.querySelector('.signOut')
 $signOut.addEventListener('click', e => {
   e.preventDefault()
 
+  localStorage.removeItem('token')
   window.open('./auth.html', '_self')
 })
