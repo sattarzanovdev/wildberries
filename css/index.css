@@ -259,6 +259,11 @@ body{
   right: 40px;
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
 .add{
   width: 150px;
   height: 35px;
@@ -275,4 +280,16 @@ body{
   opacity: 1;
   transition: .5s;
   top: 80px;
+}
+
+.signOut{
+  width: 150px;
+  height: 35px;
+  background: red;
+  font-family: montserrat;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  margin: 25px;
 }

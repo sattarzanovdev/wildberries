@@ -28,7 +28,7 @@ $form.addEventListener('submit', e => {
   .then(res => res.json())
   .then(res => {
     const token = localStorage.getItem('token')
-    localStorage.setItem('token', res.auth_token, `${res.auth_token === token ? window.open('./index.html', '_self') : alert('ЖОГОЛЧУ Э')}`)
+    localStorage.setItem('token', res.auth_token, `${res.auth_token === token ? window.open('./index.html', '_self') : ''}`)
     localStorage.setItem('email', $email.value)
   })
 })

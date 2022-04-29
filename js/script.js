@@ -16,6 +16,12 @@ const $createGoodBtn = document.querySelector('.createGood')
 
 const BASE_URL = 'https://pbasics.pythonanywhere.com'
 
+if(!localStorage.getItem('token')){
+  window.open('./auth.html', '_self')
+}else{
+  alert('Welcome')
+}
+
 window.addEventListener('load', () => {
   getRequest('products')
 })
@@ -94,6 +100,7 @@ $createGoodBtn.addEventListener('click', e => {
   e.preventDefault()
 
   createProducts()
+  window.location.reload()
 })
 
 function deleteProducts(id){
@@ -104,6 +111,9 @@ function deleteProducts(id){
     }
   })
   .then(cardTemplate)
+
+  window.location.reload()
+
 }
 
 const $addGood = document.querySelector('.add_good')
@@ -158,3 +168,11 @@ function Edit(id){
   .then(res => res.json())
   .then(getProducts)
 }
+
+const $signOut = document.querySelector('.signOut')
+
+$signOut.addEventListener('click', e => {
+  e.preventDefault()
+
+  window.open('./auth.html', '_self')
+})
