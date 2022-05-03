@@ -26,13 +26,14 @@ window.addEventListener('load', () => {
   getRequest('products')
 })
 
-$search.addEventListener('input', e => {
-  let value = e.target.value.toUpperCase()
-    getRequest('products', cb => {
-      const filtered = cb.filter(item => item.title.toUpperCase().includes(value))
-      cardTemplate(filtered)
-    })
-})
+// $search.addEventListener('input', e => {
+//   const value = e.target.value.toUpperCase()
+//     getRequest('products', cb => {
+//       const filtered = cb.filter(item => item.title.includes(value))
+//       cardTemplate(filtered)
+//       return filtered
+//     })
+// })
 
 function getRequest(endPoint){
   fetch(`${BASE_URL}/${endPoint}`)    

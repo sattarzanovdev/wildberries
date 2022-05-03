@@ -38,3 +38,6 @@ $have.addEventListener('click' , () => {
   window.open('./register.html', '_self')
 })
 
+if(localStorage.getItem('token')){
+  window.open('./index.html', '_self')
+}
