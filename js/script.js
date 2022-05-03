@@ -93,7 +93,7 @@ function createProducts(){
     })
   })
   .then(res => res.json())
-  .then(cardTemplate)
+  .then(cardTemplate())
 
 }
 
@@ -106,14 +106,13 @@ $createGoodBtn.addEventListener('click', e => {
 
 function deleteProducts(id){
   fetch(`${BASE_URL}/products/delete/${id}`, {
-    method:'DELETE',
+    method: 'DELETE',
     headers: {
       'Content-type': 'application/json',
     }
   })
   .then(cardTemplate)
 
-  window.location.reload()
 
 }
 
